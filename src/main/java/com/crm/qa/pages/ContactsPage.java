@@ -19,10 +19,10 @@ public class ContactsPage extends TestBase {
 	{
 		return contactslabel.isDisplayed();
 	}
-	public void selectSingleContactname()
-	{
-		driver.findElement(By.xpath("//input[@name='contact_id' and @value='51773576']")).click();
-		driver.findElement(By.xpath("//td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id' and @value='51773574']")).click();
+	public boolean selectSingleContactname() throws InterruptedException
+	{   Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@value='52067808']")).click();
+	return driver.findElement(By.xpath("//input[@value='52067808']")).isSelected();
 	}
 	  
 

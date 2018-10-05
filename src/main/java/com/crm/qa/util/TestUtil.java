@@ -1,5 +1,7 @@
 package com.crm.qa.util;
 
+import org.apache.commons.codec.binary.Base64;
+
 import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
@@ -11,5 +13,9 @@ public class TestUtil extends TestBase{
 	{
 		driver.switchTo().frame("mainpanel");
 	}
-	
+    public static String decodePwd(String pwd)
+    {
+    	 byte[] decoded_pwd=Base64.decodeBase64(pwd.getBytes());
+    	 return new String(decoded_pwd);
+    }
 }

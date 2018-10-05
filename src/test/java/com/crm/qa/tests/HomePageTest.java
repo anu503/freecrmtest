@@ -46,6 +46,7 @@ public class HomePageTest extends TestBase {
 	@Test(priority=2)
 	public void verifyUsernameTest() throws Exception
 	{ 
+		
 		testutil.switchToFrame();//usename is on the frame so we need to switch to that frame
 		Assert.assertTrue(homepage.verifyCorrectUser());
 	}

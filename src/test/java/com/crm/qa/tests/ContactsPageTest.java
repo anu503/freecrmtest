@@ -1,5 +1,8 @@
 package com.crm.qa.tests;
 
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -40,9 +43,9 @@ public class ContactsPageTest  extends TestBase{
 		 Assert.assertTrue(contactspage.verifyContactsLabel(),"contacts label is missing on the page");
 	 }
 	 @Test(priority=2)
-	 public void selectSingleContactTest()
+	 public void selectSingleContactTest() throws InterruptedException
 	 {
-		 contactspage.selectSingleContactname();
+	  Assert.assertTrue( contactspage.selectSingleContactname());
 	 }
      @AfterMethod
 	 public void tearDown()
